@@ -1,0 +1,114 @@
+.App {
+    width: 40%;
+    margin: 2em auto;
+    background-color: #5e0f75;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.583);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.todo-header {
+    padding: 0.5em;
+    border-bottom: 1px solid #7e3991;
+    text-align: center;
+}
+
+.todo-header h1 {
+    margin: 0;
+}
+
+.todo-form {
+    padding: 1em;
+    margin: 0 2em;
+    border-bottom: 1px solid #ac65c0;
+}
+
+.todo-form h2
+.todo-list h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.form-control {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    font-size: 0.7em;
+    margin-bottom: 0.4em;
+}
+
+.form-control input {
+    font-size: 18px;
+    border: 1px solid #222;
+    border-radius: 2px;
+    padding: 0.5em;
+    color: #222;
+}
+
+input[type="submit"] {
+    font-size: 18px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #eee;
+    display: block;
+    width: 40%;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: .5em;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #b072c2;
+    color: #222;
+}
+
+.todo-list {
+    padding: 0 1em 2em;
+    margin: 1em 2em;
+}
+
+.todo-list h2 {
+    margin-bottom: 0;
+}
+
+.todo-list p {
+    text-align: center;
+}
+
+.todo {
+    border-bottom: 1px solid #ac65c0;
+    padding: 1em 0;
+}
+
+.todo h2 {
+    margin-bottom: .5em;
+}
+
+.todo-done {
+    text-decoration: line-through;
+    color: rgb(10, 150, 20);
+}
+
+.todo p {
+    text-align: left;
+    font-style: italic;
+    font-size: .7em;
+    margin-bottom: 1.5em;
+}
+
+.todo svg {
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 1em;
+    transition: .5s;
+}
+
+.todo svg:hover {
+    color: rgb(10, 150, 20);
+}
