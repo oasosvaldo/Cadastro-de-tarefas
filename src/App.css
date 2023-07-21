@@ -1,5 +1,5 @@
 .App {
-    width: 40%;
+    width: 50%;
     margin: 2em auto;
     background-color: #5e0f75;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.583);
@@ -98,7 +98,7 @@ input[type="submit"]:hover {
 .todo p {
     text-align: left;
     font-style: italic;
-    font-size: .7em;
+    font-size: 1.2em;
     margin-bottom: 1.5em;
 }
 

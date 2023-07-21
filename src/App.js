@@ -7,7 +7,7 @@ const API = "http://localhost:5000"
 
 function App() {
   const [title, setTitle] = useState("") //vai ser usado para consultar e atualizar o valor do titulo
-  const [time, setTime] = useState("") //horario da Task
+  const [motor, setMotor] = useState("") //horario da Task
   const [todos, setTodos] = useState([]) //Criar uma lista vazia para inserir todos dentro delas
   const [loading, setLoading] = useState(false) // Criar um tempo de espera da tela de resultados
 
@@ -35,7 +35,7 @@ function App() {
     const todo = {
       id: Math.random(),
       title,
-      time,
+      motor,
       done: false,
     }
 
@@ -54,7 +54,7 @@ function App() {
 
     //Zerando o inputs
     setTitle("")
-    setTime("")
+    setMotor("")
   } // Com este evento é possível parar o envio do formulário
 
   const handleDelete = async (id) => {
@@ -90,43 +90,43 @@ function App() {
     <div className="App">
       {/*Teremos a aplicacao dividida em 3 partes header/form/lista */}
       <div className='todo-header'>
-        <h1>Cadastro de Tarefas</h1>
+        <h1>Cadastro de Carros</h1>
       </div>
       <div className='todo-form'>
-        <h2>Insira sua próxima tarefa:</h2>
+        <h2>Cadastre seu carro:</h2>
         <form onSubmit={handleSubmit}>
           <div className='form-control'>
-            <label htmlFor='title'>O que você vai fazer?</label>
+            <label htmlFor='title'>Qual é o apelido do carro:</label>
             <input
               type="text"
               name="title"
-              placeholder="Título da tarefa"
+              placeholder="Ex: Camaro Amarelo"
               onChange={(e) => setTitle(e.target.value)}
               value={title || ""}
               required>
             </input>
           </div>
           <div className='form-control'>
-            <label htmlFor='time'>Duração:</label>
+            <label htmlFor='motor'>Motorização:</label>
             <input
               type="text"
-              name="time"
-              placeholder="Tempo estimado (em horas)"
-              onChange={(e) => setTime(e.target.value)}
-              value={time || ""}
+              name="motor"
+              placeholder="Ex: 1.0 3 cilndros Aspirado"
+              onChange={(e) => setMotor(e.target.value)}
+              value={motor || ""}
               required>
             </input>
           </div>
-          <input type='submit' value="Criar tarefa"></input>
+          <input type='submit' value="Cadastrar"></input>
         </form> {/*(ON é sempre uma evento) e (handle) é geralmente uma função que corresponde ao evento  */}
       </div>
       <div className='todo-list'>
-        <h2>Lista de tarefas:</h2>
-        {todos.length === 0 && <p>Não há tarefas!</p>}
+        <h2>Lista de Carros:</h2>
+        {todos.length === 0 && <p>Não há carros!</p>}
         {todos.map((todo) => (
         <div className='todo' key={todo.id}>
-          <h3 className={todo.done ? "todo-done" : ""}>{todo.title}</h3>
-          <p>Duração: {todo.time}</p>
+          <h4 className={todo.done ? "todo-done" : ""}>{todo.title}</h4>
+          <p>Motorização: {todo.motor}</p>
           <div className='actions'>
             <span onClick={() => handleEdit(todo)}>
               {!todo.done ? <BsBookmarkCheck /> : <BsBookmarkCheckFill />}
@@ -136,7 +136,7 @@ function App() {
         </div>))}
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
